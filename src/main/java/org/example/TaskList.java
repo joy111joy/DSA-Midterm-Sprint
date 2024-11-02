@@ -63,19 +63,19 @@ public class TaskList {
 
     @Override
     public String toString() {
-        String result = "";  // Initialize an empty string to store the tasks
-        Node current = head; // Start from the head of the list
+        String result = "";
+        Node current = head;
 
         if (current == null) {
-            return "No tasks available";  // Return if the list is empty
+            return "No tasks available";
         }
 
         while (current != null) {
-            result += current.task.toString() + "\n";  // Concatenate each task's description and status
-            current = current.next;  // Move to the next node in the list
+            result += current.task.toString() + "\n";
+            current = current.next;
         }
 
-        return result;  // Return the final string containing all tasks
+        return result;
     }
 }
 

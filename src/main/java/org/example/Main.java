@@ -1,11 +1,9 @@
 package org.example;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 import java.util.Scanner;
 
 public class Main {
-    private static User[] users = new User[10]; // A simple array to store users
+    private static User[] users = new User[10];
     private static int userCount = 0;
 
     public static void main(String[] args) {
@@ -19,7 +17,7 @@ public class Main {
             System.out.println("5. Exit");
 
             int choice = scanner.nextInt();
-            scanner.nextLine();  // Consume newline
+            scanner.nextLine();
 
             switch (choice) {
                 case 1:
@@ -80,7 +78,6 @@ public class Main {
         }
     }
 
-    // Helper method to find a user by name
     private static User findUser(String name) {
         for (int i = 0; i < userCount; i++) {
             if (users[i].getName().equals(name)) {
@@ -90,7 +87,6 @@ public class Main {
         return null;
     }
 
-    // Helper method to check if a user already exists
     private static boolean userExists(String name) {
         return findUser(name) != null;
     }
